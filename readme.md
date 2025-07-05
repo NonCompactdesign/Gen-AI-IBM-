@@ -65,7 +65,7 @@ All tasks are saved locally in your browser (no account required).
 
 > **Tarun Chebolu**  
 > B.Tech Computer Science Undergraduate  
-> Created for the **IBM GenAI University Challenge**  
+> Created for the **IBM GenAI Project**  
 > GitHub: [@NonCompactdesign](https://github.com/NonCompactdesign)  
 
 ---
