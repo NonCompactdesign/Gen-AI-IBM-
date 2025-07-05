@@ -84,15 +84,16 @@ button.addEventListener("click", async () => {
     const response = await callOpenRouter({
       model: "mistralai/mistral-7b-instruct",
       messages: [
-        {
-          role: "system",
-          content: "You are a helpful assistant that creates a to-do list based on what the user said. Use common sense and infer what the user might want to do. Reply ONLY with short, bullet-pointed to-do items, no explanation or extra text."
-        },
-        {
-          role: "user",
-          content: `Convert the following message into clear, actionable to-do list items:\n"${userText}"`
-        }
-      ]
+  {
+    role: "system",
+    content: "You are an agent that takes user input and analyzes what are the tasks to be added to a to-do list. Do not respond with anything except the to-do list entries."
+  },
+  {
+    role: "user",
+    content: `From the message below, identify and extract all actionable tasks as a to-do list (no intro, no explanation):\n${userText}`
+  }
+]
+
     });
 
     if (!response.ok) throw new Error(`API Error ${response.status}: ${response.statusText}`);
