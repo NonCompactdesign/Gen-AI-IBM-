@@ -171,3 +171,7 @@ function resetKey() {
   localStorage.removeItem("openrouter_key");
   location.reload();
 }
+document.getElementById("resetKeyBtn").addEventListener("click", () => {
+  localStorage.removeItem("openrouter_key");
+  location.reload();
+});
