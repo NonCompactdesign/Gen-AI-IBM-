@@ -165,3 +165,9 @@ if (params.has("share")) {
   localStorage.setItem("todo_tasks", JSON.stringify(shared));
   location.href = location.origin + location.pathname; // Clean the URL
 }
+
+
+function resetKey() {
+  localStorage.removeItem("openrouter_key");
+  location.reload();
+}
