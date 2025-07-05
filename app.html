@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI To-Do Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4363/4363435.png" />
+</head>
+<body>
+  <div class="container">
+    <!-- 🌙 Dark Mode Toggle -->
+    <label class="toggle-wrapper">
+      <input type="checkbox" id="darkToggle" />
+      🌙 Dark Mode
+    </label>
+
+    <h1>🧠 AI To-Do Assistant</h1>
+
+    <textarea id="userInput" placeholder="Tell me about your day..."></textarea>
+    <button id="generateBtn">Generate To-Do List</button>
+    <button id="shareBtn">📤 Share To-Do List</button>
+    <button onclick="resetKey()">🔑 Reset API Key</button>
+
+    <input id="shareOutput" readonly placeholder="Your shareable link will appear here here..." />
+    <p id="status">⏳ Waiting for input...</p>
+
+    <!-- 📌 Header Labels -->
+    <div class="list-header">
+      <span class="task-label">Task</span>
+      <span class="status-label">To Do</span>
+      <span class="status-label">Doing</span>
+      <span class="status-label">Done</span>
+      <span class="status-label">❌</span>
+    </div>
+
+    <ul id="todoList"></ul>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
