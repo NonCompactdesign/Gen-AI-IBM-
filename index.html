@@ -4,22 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI To-Do Assistant</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
+    <label class="toggle-wrapper">
+  <input type="checkbox" id="darkToggle" />
+  🌙 Dark Mode
+</label>
+
     <h1>Talk to Me – AI To-Do Assistant</h1>
     <textarea id="userInput" placeholder="Tell me about your day..."></textarea>
-    <button onclick="processInput()">Generate To-Do List</button>
+    <button id="generateBtn">Generate To-Do List</button>
+    <button id="shareBtn">📤 Share To-Do List</button>
+<input id="shareOutput" readonly placeholder="Shareable link will appear here">
 
-    <h2>Your To-Do List</h2>
+    <p id="status" style="color: gray;">⏳ Waiting for input...</p>
+    <div class="list-header">
+        <span class="task-label">Task</span>
+        <span class="status-label">To Do</span>
+        <span class="status-label">Doing</span>
+        <span class="status-label">Done</span>
+        <span class="status-label">❌</span>
+    </div>
+
     <ul id="todoList"></ul>
-
-    <h3>Modify List</h3>
-    <input id="editInput" placeholder="e.g. Remove second task" />
-    <button onclick="editList()">Update List</button>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
